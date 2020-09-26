@@ -4,6 +4,31 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  position: relative;
+}
+
+.heading2Xl::after {
+  content: " ";
+  width: 100%;
+  height: 15px;
+  z-index: -1;
+  position: absolute;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 10px;
+}
+
+.socialList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.socialList li {
+  list-style: none;
+  margin: 0 20px;
 }
 
 .headingXl {
@@ -18,6 +43,18 @@
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
+  position: relative;
+}
+
+.headingLg::after {
+  content: " ";
+  width: 100%;
+  height: 10px;
+  z-index: -1;
+  position: absolute;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 5px;
 }
 
 .headingMd {
@@ -26,7 +63,8 @@
 }
 
 .borderCircle {
-  border-radius: 9999px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
 }
 
 .colorInherit {
