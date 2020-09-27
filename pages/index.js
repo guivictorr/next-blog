@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>
           Olá, me chamo Guilherme Victor e estou atualmente no último ano do
-          ensino médio e pretendo cursar a área de tecnologia. comecei a estudar
+          ensino médio e pretendo cursar a área de tecnologia. Comecei a estudar
           programação no final do ano passado, hoje estou estudando
           exclusivamente ReactJS, React Native e NodeJS em geral e sonho em
           trabalhar nessa área algum dia.
