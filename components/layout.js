@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import styles from "../styles/layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = 'Guilherme Victor'
-export const siteTitle = 'Next.js Sample Website'
+const name = "Guilherme Victor";
+export const siteTitle = "Guilherme Victor Blog";
 
 export default function Layout({ children, home }) {
   return (
@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Olá, eu me chamo Guilherme Victor, sou um desenvolvedor front-end Brasileiro."
         />
         <meta
           property="og:image"
@@ -33,6 +33,17 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <ul className={utilStyles.socialList}>
+              <li>
+                <a href="https://guilhermevictor.live">Portifólio</a>
+              </li>
+              <li>
+                <a href="https://github.com/guivictorr">Github</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/guilhermeviictor">Linkedin</a>
+              </li>
+            </ul>
           </>
         ) : (
           <>
@@ -45,11 +56,7 @@ export default function Layout({ children, home }) {
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+            <h3 className={utilStyles.colorInherit}>{name}</h3>
           </>
         )}
       </header>
@@ -62,5 +69,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
