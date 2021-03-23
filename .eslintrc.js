@@ -5,8 +5,10 @@ module.exports = {
     node: true,
   },
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'airbnb',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -17,11 +19,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'react/jsx-props-no-spreading': 'off',
   },
 };
