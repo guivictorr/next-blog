@@ -1,19 +1,13 @@
 import { GetStaticProps } from 'next';
 import { PostData } from '../@types/posts';
+import getAllPosts from '../data/posts/getAllPosts';
 
 type HomeProps = {
   posts: PostData[];
 };
 
-const getPosts = async (): Promise<PostData> => {
-  const posts = await fetch('http://limitless-cove-88022.herokuapp.com/posts');
-  const jsonPosts = posts.json();
-
-  return jsonPosts;
-};
-
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts();
+  const posts = await getAllPosts();
 
   return {
     props: {
