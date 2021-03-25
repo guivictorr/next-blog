@@ -4,6 +4,7 @@ export default {
     black: '#1a1a1a',
     dark: '#0F0F0F',
     white: '#f5f5f5',
+    gray: '#8E8E8E',
   },
   spacings: {
     small: '1rem',

@@ -14,7 +14,12 @@ const Global = createGlobalStyle`
 
   body {
     font-family: Inter, sans-serif;
-    font-size: ${({ theme }) => theme.font.sizes.medium}
+    font-size: ${({ theme }) => theme.font.sizes.medium};
+    background: black;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 

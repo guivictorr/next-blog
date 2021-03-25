@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { PostData } from '../@types/posts';
+import Header from '../components/Header';
 import getAllPosts from '../data/posts/getAllPosts';
 
 type HomeProps = {
@@ -17,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home = ({ posts }: HomeProps) => {
-  return <h1>Hello World</h1>;
+  return <Header />;
 };
 
 export default Home;
