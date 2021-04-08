@@ -9,7 +9,6 @@ export const Container = styled.header`
     padding: 0 ${theme.spacings.large};
     border-bottom: 2px solid rgb(35, 35, 35);
     backdrop-filter: blur(42px);
-    position: fixed;
     width: 100%;
 
     nav {

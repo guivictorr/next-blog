@@ -15,7 +15,7 @@ const Global = createGlobalStyle`
   body {
     font-family: Inter, sans-serif;
     font-size: ${({ theme }) => theme.font.sizes.medium};
-    background: black;
+    background: ${({ theme }) => theme.colors.black};
   }
 
   a {
