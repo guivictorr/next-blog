@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 
 import { PostData } from '../@types/posts';
-import * as S from '../styles/pages/Home';
+import * as S from '../styles/pages/home';
 
 import Header from '../components/Header';
 import Wrapper from '../components/Wrapper/styles';
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home = ({ posts }: HomeProps) => {
   return (
-    <>
+    <main>
       <Header />
       <Wrapper>
         <S.HomeStart>
@@ -40,8 +40,56 @@ const Home = ({ posts }: HomeProps) => {
             <img src="me.jpg" alt="Guilherme Victor" />
           </figure>
         </S.HomeStart>
+        <S.LastPosts>
+          <h1>Últimas publicações</h1>
+          <ul>
+            <li>
+              <h1>Hello World</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
+                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
+                convallis, in tempor purus euismod. Aenean in dapibus velit.
+                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
+                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
+                convallis rutrum mauris.
+              </p>
+            </li>
+            <li>
+              <h1>Hello World</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
+                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
+                convallis, in tempor purus euismod. Aenean in dapibus velit.
+                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
+                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
+                convallis rutrum mauris.
+              </p>
+            </li>
+            <li>
+              <h1>Hello World</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
+                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
+                convallis, in tempor purus euismod. Aenean in dapibus velit.
+                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
+                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
+                convallis rutrum
+                mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.
+              </p>
+            </li>
+          </ul>
+        </S.LastPosts>
+        <S.Footer>
+          <p>
+            Feito com 💛 por{' '}
+            <a href="https://github.com/guivictorr">Guilherme Victor</a>
+          </p>
+        </S.Footer>
       </Wrapper>
-    </>
+    </main>
   );
 };
 
