@@ -2,12 +2,13 @@ import { GetStaticProps } from 'next';
 
 import { PostData } from '../@types/posts';
 import * as S from '../styles/pages/home';
+import getAllPosts from '../data/posts/getAllPosts';
 
 import Header from '../components/Header';
 import Wrapper from '../components/Wrapper/styles';
-import getAllPosts from '../data/posts/getAllPosts';
+import PostCard from '../components/PostCard';
 
-type HomeProps = {
+type IHomeProps = {
   posts: PostData[];
 };
 
@@ -21,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home = ({ posts }: HomeProps) => {
+const Home = ({ posts }: IHomeProps) => {
   return (
     <main>
       <Header />
@@ -43,43 +44,14 @@ const Home = ({ posts }: HomeProps) => {
         <S.LastPosts>
           <h1>Últimas publicações</h1>
           <ul>
-            <li>
-              <h1>Hello World</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
-                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
-                convallis, in tempor purus euismod. Aenean in dapibus velit.
-                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
-                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
-                convallis rutrum mauris.
-              </p>
-            </li>
-            <li>
-              <h1>Hello World</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
-                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
-                convallis, in tempor purus euismod. Aenean in dapibus velit.
-                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
-                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
-                convallis rutrum mauris.
-              </p>
-            </li>
-            <li>
-              <h1>Hello World</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                augue erat, sollicitudin ac risus eu, bibendum dignissim enim.
-                Nunc a rhoncus mi. Curabitur pellentesque orci non justo
-                convallis, in tempor purus euismod. Aenean in dapibus velit.
-                Donec vitae commodo nisl. Suspendisse vehicula mattis ante id
-                aliquet. Fusce in ornare ligula. Mauris eget vehicula nulla,
-                convallis rutrum
-                mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.mauris.
-              </p>
-            </li>
+            {posts.map(post => (
+              <PostCard
+                slug={post.slug}
+                description={post.content}
+                title={post.title}
+                key={post.id}
+              />
+            ))}
           </ul>
         </S.LastPosts>
         <S.Footer>

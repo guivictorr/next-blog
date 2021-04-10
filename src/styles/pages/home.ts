@@ -48,41 +48,6 @@ export const LastPosts = styled.section`
     ul {
       list-style: none;
       padding: 20px 0;
-
-      li {
-        width: 80rem;
-        height: 220px;
-        background: ${theme.colors.dark};
-        color: ${theme.colors.white};
-        border-radius: 6px;
-        padding: 0 45px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-
-        &:first-child {
-          margin-top: 45px;
-        }
-
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-
-        h1 {
-          color: ${theme.colors.white};
-        }
-
-        p {
-          color: ${theme.colors.gray};
-          font-size: ${theme.font.sizes.medium};
-          max-width: 100%;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          margin-top: 5px;
-        }
-      }
     }
   `}
 `;
