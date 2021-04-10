@@ -46,7 +46,7 @@ const Home = ({ posts }: IHomeProps) => {
           <ul>
             {posts.map(post => (
               <PostCard
-                slug={post.slug}
+                id={post.id}
                 description={post.content}
                 title={post.title}
                 key={post.id}

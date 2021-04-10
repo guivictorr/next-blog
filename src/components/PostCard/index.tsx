@@ -2,15 +2,15 @@ import Link from 'next/link';
 import * as S from './styles';
 
 type IPostCard = {
-  slug: string;
+  id: number;
   title: string;
   description: string;
 };
 
-const PostCard = ({ slug, title, description }: IPostCard) => {
+const PostCard = ({ id, title, description }: IPostCard) => {
   return (
     <S.Container>
-      <Link href={`/post/${slug}`}>
+      <Link href={`/post/${id}`}>
         <a>
           <h1>{title}</h1>
           <p>{description}</p>
