@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { SITE_NAME } from '../config/appConfig';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -35,7 +36,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="pt-br">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -43,6 +44,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="favicon.png" type="image/png" />
+          <title>{SITE_NAME}</title>
         </Head>
         <body>
           <Main />
