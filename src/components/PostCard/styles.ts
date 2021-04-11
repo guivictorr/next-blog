@@ -8,10 +8,10 @@ export const Container = styled.li`
       background: ${theme.colors.dark};
       color: ${theme.colors.white};
       border-radius: 6px;
-      padding: 0 45px;
+      padding: 35px 45px;
       display: flex;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: space-between;
       flex-direction: column;
 
       &:first-child {

@@ -49,6 +49,7 @@ const Home = ({ posts }: IHomeProps) => {
                 id={post.id}
                 description={post.content}
                 title={post.title}
+                createdAt={post.created_at}
                 key={post.id}
               />
             ))}
