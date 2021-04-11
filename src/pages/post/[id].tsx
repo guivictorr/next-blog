@@ -4,8 +4,8 @@ import countAllPosts from '../../data/posts/countAllPosts';
 import getAllPosts from '../../data/posts/getAllPosts';
 import getPost from '../../data/posts/getPost';
 
-const Post = ({ title }: PostData) => {
-  return <h1>{title}</h1>;
+const Post = ({ content }: PostData) => {
+  return <p dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
