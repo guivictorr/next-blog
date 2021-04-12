@@ -51,19 +51,3 @@ export const LastPosts = styled.section`
     }
   `}
 `;
-
-export const Footer = styled.footer`
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  ${({ theme }) => css`
-    color: ${theme.colors.white};
-
-    a {
-      color: ${theme.colors.yellow};
-    }
-  `}
-`;
