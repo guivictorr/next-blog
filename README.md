@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align='center'>Título</h1>
+<p align='center'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
 
-## Getting Started
+## 💄 Layout
 
-First, run the development server:
+- [Layout no Figma](https://www.figma.com/file/pISK0FCtXnK5G7VS6pN3lo/Portfolio?node-id=0%3A1)
 
-```bash
-npm run dev
-# or
-yarn dev
+## 🛠 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+Frontend
+
+- [ReactJS](https://pt-br.reactjs.org)
+- [Next.js](https://nextjs.org)
+- [Styled Components](styled-components.com/)
+- [Typescript](typescriptlang.org/)
+- [Remark](https://remark.js.org/)
+
+Backend
+
+- [NodeJS](https://nodejs.org/)
+- [Strapi](https://strapi.io/)
+- [Postgres](https://www.postgresql.org)
+
+## 📱💻 Instruções
+
+```
+## 1. Clonar repositório
+git clone https://github.com/guivictorr/next-blog.git
+
+## 2. Entrar na pasta
+cd next-blog
+
+## 3. Instalar as dependências
+yarn
+
+## 4. Rodar a aplicação
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤔 Como contribuir
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Faça um fork desse repositório;
+- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
