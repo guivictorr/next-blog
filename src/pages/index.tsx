@@ -1,32 +1,24 @@
 import { GetStaticProps } from 'next';
 
 import { PostData } from '../@types/posts';
-import * as S from '../styles/pages/home';
 import getAllPosts from '../data/posts/getAllPosts';
+
+import * as S from '../styles/pages/home';
 
 import Header from '../components/Header';
 import Wrapper from '../components/Wrapper/styles';
 import PostCard from '../components/PostCard';
+import Footer from '../components/Footer';
 
 type IHomeProps = {
   posts: PostData[];
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
-
-  return {
-    props: {
-      posts,
-    },
-  };
 };
 
 const Home = ({ posts }: IHomeProps) => {
   return (
     <main>
       <Header />
-      <Wrapper>
+      <Wrapper maxWidth={140}>
         <S.HomeStart>
           <S.TextBox>
             <p>Olá, me chamo</p>
@@ -55,15 +47,20 @@ const Home = ({ posts }: IHomeProps) => {
             ))}
           </ul>
         </S.LastPosts>
-        <S.Footer>
-          <p>
-            Feito com 💛 por{' '}
-            <a href="https://github.com/guivictorr">Guilherme Victor</a>
-          </p>
-        </S.Footer>
+        <Footer />
       </Wrapper>
     </main>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getAllPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default Home;
