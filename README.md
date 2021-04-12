@@ -1,5 +1,5 @@
-<h1 align='center'>Título</h1>
-<p align='center'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+<h1 align='center'>Next Blog</h1>
+<p align='center'>Blog desenvolvido como projeto pessoal para postar artigos (quando eu estiver disposto), e para aprender a usar um CMS (Strapi)</p>
 
 ## 💄 Layout
 
