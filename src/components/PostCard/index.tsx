@@ -15,7 +15,7 @@ const PostCard = ({ id, title, description, createdAt }: IPostCard) => {
       <Link href={`/post/${id}`}>
         <a>
           <h1>{title}</h1>
-          <p>{description}</p>
+          <p>{description.replace(/#/gi, '')}</p>
           <Date date={createdAt} />
         </a>
       </Link>

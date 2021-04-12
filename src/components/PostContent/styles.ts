@@ -20,6 +20,7 @@ export const Container = styled.article`
     h5,
     h6 {
       color: ${theme.colors.yellow};
+      margin: ${theme.spacings.medium} 0;
     }
 
     a {
@@ -39,6 +40,7 @@ export const Container = styled.article`
       color: ${theme.colors.white};
       margin: ${theme.spacings.medium} 0;
       font-size: ${theme.font.sizes.large};
+      line-height: 1.35;
     }
 
     ul,
