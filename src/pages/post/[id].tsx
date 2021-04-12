@@ -1,11 +1,35 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+
 import { PostData } from '../../@types/posts';
+
+import * as S from '../../styles/pages/post';
+
 import countAllPosts from '../../data/posts/countAllPosts';
 import getAllPosts from '../../data/posts/getAllPosts';
 import getPost from '../../data/posts/getPost';
 
-const Post = ({ content }: PostData) => {
-  return <p dangerouslySetInnerHTML={{ __html: content }} />;
+import Header from '../../components/Header';
+import Heading from '../../components/Heading';
+import Wrapper from '../../components/Wrapper/styles';
+import PostDetails from '../../components/PostDetails';
+import PostContent from '../../components/PostContent';
+import Footer from '../../components/Footer';
+
+const Post = ({ title, cover, content, created_at, author }: PostData) => {
+  return (
+    <main>
+      <Header />
+      <Wrapper maxWidth={100}>
+        <S.Content>
+          <Heading>{title}</Heading>
+          <img src={cover[0].formats.medium.url} alt="Teste" />
+          <PostDetails author={author} created_at={created_at} />
+          <PostContent content={content} />
+          <Footer />
+        </S.Content>
+      </Wrapper>
+    </main>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

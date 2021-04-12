@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import formatDate from '../../utils/formatDate';
+import Date from '../Date';
 import * as S from './styles';
 
 type IPostCard = {
@@ -16,7 +16,7 @@ const PostCard = ({ id, title, description, createdAt }: IPostCard) => {
         <a>
           <h1>{title}</h1>
           <p>{description}</p>
-          <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+          <Date date={createdAt} />
         </a>
       </Link>
     </S.Container>
