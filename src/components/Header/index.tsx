@@ -1,14 +1,17 @@
 import Link from 'next/link';
 
-import { SITE_NAME } from '../../config/appConfig';
 import { Container } from './styles';
 
-const Header = () => {
+type HeaderProps = {
+  home?: boolean;
+};
+
+const Header = ({ home }: HeaderProps) => {
   return (
     <Container>
       <nav>
         <Link href="/">
-          <a>👋 {SITE_NAME}</a>
+          <a>{home ? `👋 Guilherme Victor` : 'Voltar'}</a>
         </Link>
       </nav>
     </Container>

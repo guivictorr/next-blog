@@ -23,6 +23,10 @@ export const Container = styled.header`
       font-size: 3rem;
       color: ${theme.colors.yellow};
       font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        filter: brightness(0.7);
+      }
     }
   `}
 `;

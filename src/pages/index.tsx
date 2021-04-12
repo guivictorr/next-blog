@@ -17,7 +17,7 @@ type IHomeProps = {
 const Home = ({ posts }: IHomeProps) => {
   return (
     <main>
-      <Header />
+      <Header home />
       <Wrapper maxWidth={140}>
         <S.HomeStart>
           <S.TextBox>
@@ -54,7 +54,7 @@ const Home = ({ posts }: IHomeProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts('_sort=created_at:desc');
 
   return {
     props: {
