@@ -21,8 +21,9 @@ export const TextBox = styled.div`
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.superLarge};
 
-    b {
+    h1 {
       color: ${theme.colors.yellow};
+      font-size: 6rem;
     }
 
     p:last-child {
@@ -40,7 +41,7 @@ export const LastPosts = styled.section`
     flex-direction: column;
     align-items: center;
 
-    h1 {
+    b {
       color: ${theme.colors.yellow};
       font-size: ${theme.font.sizes.superLarge};
     }

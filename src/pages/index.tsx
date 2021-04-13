@@ -34,7 +34,7 @@ const Home = ({ posts }: IHomeProps) => {
           <S.HomeStart>
             <S.TextBox>
               <p>Olá, me chamo</p>
-              <b>Guilherme Victor</b>
+              <h1>Guilherme Victor</h1>
               <p>{description}</p>
             </S.TextBox>
             <figure>
@@ -42,7 +42,7 @@ const Home = ({ posts }: IHomeProps) => {
             </figure>
           </S.HomeStart>
           <S.LastPosts>
-            <h1>Últimas publicações</h1>
+            <b>Últimas publicações</b>
             <ul>
               {posts.map(post => (
                 <PostCard

@@ -33,6 +33,7 @@ export const Container = styled.li`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        font-size: ${theme.font.sizes.superLarge};
       }
 
       p {
