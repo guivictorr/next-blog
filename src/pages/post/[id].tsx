@@ -14,21 +14,30 @@ import Wrapper from '../../components/Wrapper/styles';
 import PostDetails from '../../components/PostDetails';
 import PostContent from '../../components/PostContent';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO';
 
-const Post = ({ title, cover, content, created_at, author }: PostData) => {
+const Post = ({ title, cover, content, created_at, author, id }: PostData) => {
   return (
-    <main>
-      <Header />
-      <Wrapper maxWidth={100}>
-        <S.Content>
-          <Heading>{title}</Heading>
-          <img src={cover[0].formats.medium.url} alt="Teste" />
-          <PostDetails author={author} created_at={created_at} />
-          <PostContent content={content} />
-          <Footer />
-        </S.Content>
-      </Wrapper>
-    </main>
+    <>
+      <SEO
+        title={title}
+        url={`/post/${id}`}
+        imageUrl={cover[0].formats.medium.url}
+        description={content}
+      />
+      <main>
+        <Header />
+        <Wrapper maxWidth={100}>
+          <S.Content>
+            <Heading>{title}</Heading>
+            <img src={cover[0].formats.medium.url} alt="Teste" />
+            <PostDetails author={author} created_at={created_at} />
+            <PostContent content={content} />
+            <Footer />
+          </S.Content>
+        </Wrapper>
+      </main>
+    </>
   );
 };
 
