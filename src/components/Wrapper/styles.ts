@@ -9,6 +9,10 @@ const Wrapper = styled.div<WrapperProps>`
   margin: 0 auto;
   padding: 0 60px;
   font-size: ${({ theme }) => theme.font.sizes.medium};
+
+  @media (max-width: 640px) {
+    padding: 0 30px;
+  }
 `;
 
 export default Wrapper;

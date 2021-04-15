@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components';
 export const Container = styled.li`
   ${({ theme }) => css`
     a {
-      width: 80rem;
       height: 220px;
       background: ${theme.colors.dark};
       color: ${theme.colors.white};

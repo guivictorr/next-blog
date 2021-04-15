@@ -7,10 +7,35 @@ export const HomeStart = styled.section`
   margin-top: 200px;
   height: 80vh;
 
+  @media (max-width: 946px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
   figure {
+    width: 420px;
+    height: 520px;
+
+    @media (max-width: 946px) {
+      width: 300px;
+      height: 300px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    @media (max-width: 630px) {
+      width: 200px;
+      height: 200px;
+    }
+
     img {
       width: 100%;
-      height: 520px;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -21,9 +46,16 @@ export const TextBox = styled.div`
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.superLarge};
 
+    @media (max-width: 946px) {
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      font-size: ${theme.font.sizes.large};
+    }
+
     h1 {
       color: ${theme.colors.yellow};
-      font-size: 6rem;
     }
 
     p:last-child {
@@ -37,6 +69,10 @@ export const TextBox = styled.div`
 
 export const LastPosts = styled.section`
   ${({ theme }) => css`
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +84,7 @@ export const LastPosts = styled.section`
 
     ul {
       list-style: none;
-      padding: 20px 0;
+      width: 100%;
     }
   `}
 `;

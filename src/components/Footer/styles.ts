@@ -6,6 +6,7 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   ${({ theme }) => css`
     color: ${theme.colors.white};
