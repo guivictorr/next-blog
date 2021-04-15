@@ -12,7 +12,7 @@ export const HomeStart = styled.section`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    margin: 50px 0;
+    margin: 10px 0;
   }
 
   figure {
